@@ -5,20 +5,22 @@
 <body>
   <section class="hero is-primary is-fullheight">
     <div class="hero-head">
-      <div>
-        Test:
-        <a href="{{ url_for('main.index') }}">Home</a>
-        {% if current_user.is_anonymous %}
-        <a href="{{ url_for('main.login') }}">Login</a>
-        {% else %}
-        <a href="{{ url_for('main.logout') }}">Logout</a>
-        {% endif %}
-        <div class="hero-body">
-          <div class="container has-text-centered">
-            {% block content %}
-            {% endblock %}
-          </div>
-      </div>
+      <nav class="navbar">
+        <div>
+          Test:
+          <a href="{{ url_for('main.index') }}">Home</a>
+          {% if current_user.is_anonymous %}
+          <a href="{{ url_for('main.login') }}">Login</a>
+          {% else %}
+          <a href="{{ url_for('main.logout') }}">Logout</a>
+          {% endif %}
+          <div class="hero-body">
+            <div class="container has-text-centered">
+              {% block content %}
+              {% endblock %}
+            </div>
+        </div>
+      </nav>
     </div>
   </div>
 </section>
