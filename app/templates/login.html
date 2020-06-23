@@ -9,13 +9,18 @@
       <div class="control">
         <input class="input is-large" type="username" name="username" placeholder="Username" autofocus="">
       </div>
-  </div>
-    <p>
-      {{ form.password.label }}<br>
-      {{ form.password(size=32) }}<br>
-    </p>
-    <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-    <p>{{ form.submit() }}</p>
+    </div>
+    <div class="field">
+      <div class="control">
+        <input class="input is-large" type="password" name="password" placeholder="Password">
+      </div>
+    </div>
+    <div class="field">
+      <label class="checkbox">
+        <input type="checkbox">
+        Remember me
+      </label>
+    </div>
       {% if error %}
         <p class="error"><strong>Error:</strong> {{ error }}
       {% endif %}
