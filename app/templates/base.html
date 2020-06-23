@@ -6,7 +6,7 @@
   <section class="hero is-primary is-fullheight">
     <div class="hero-head">
       <nav class="navbar">
-        <div>
+        <div id="navbarMenuHeroA" class="navbar-menu">
           Test:
           <a href="{{ url_for('main.index') }}">Home</a>
           {% if current_user.is_anonymous %}
@@ -20,8 +20,8 @@
               {% endblock %}
             </div>
         </div>
-      </nav>
     </div>
+    </nav>
   </div>
 </section>
 </body>
