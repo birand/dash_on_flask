@@ -1,7 +1,9 @@
 <head>
   <title>NEWCO</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
 </head>
 <body>
+  <section class="hero is-primary is-fullheight">
   <div>
     Test:
     <a href="{{ url_for('main.index') }}">Home</a>
@@ -10,8 +12,10 @@
     {% else %}
     <a href="{{ url_for('main.logout') }}">Logout</a>
     {% endif %}
-
+    <div class="hero-body">
     {% block content %}
     {% endblock %}
   </div>
+  </div>
+</section>
 </body>
