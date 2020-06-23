@@ -3,6 +3,7 @@
 {% block content %}
 <div class="column is-4 is-offset-4">
   <h1 class="title">Sign In</h1>
+  <div class="box">
   <form action="" method="post" novalidate>
     {{ form.hidden_tag() }}
     <div class="field">
@@ -28,5 +29,6 @@
 
   </form>
   <p> New User? <a href="{{ url_for('main.register') }}">Click to Register!</a></p>
+</div>
 </div>
 {% endblock %}
