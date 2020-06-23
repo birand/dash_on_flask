@@ -4,6 +4,20 @@
 {% if current_user.is_anonymous %}
   <h1 class="title">Hello, stranger!</h1>
 {% else  %}
-  <h1 class="subtitle">Hi, {{ current_user.username }}!</h1>
+  <div>
+    <div class="container">
+    <div class="nav-right nav-menu">
+      <a class="nav-item is-tab is-hidden-tablet">
+        <span class="icon"><i class="fa fa-home"></i></span> Home
+      </a>
+      <a class="nav-item is-tab is-hidden-tablet">
+        <span class="icon"><i class="fa fa-table"></i></span> Links
+      </a>
+      <a class="nav-item is-tab is-hidden-tablet">
+        <span class="icon"><i class="fa fa-info"></i></span> About
+      </a>
+    </div>
+  </div>
+</div>
 {% endif %}
 {% endblock %}
